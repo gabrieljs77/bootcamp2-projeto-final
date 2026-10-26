@@ -17,3 +17,7 @@ test("larguraBarra limita a 100%", () => {
   expect(larguraBarra(75)).toBe(50);
   expect(larguraBarra(300)).toBe(100);
 });
+   test("textoContador mostra a quantidade", () => {
+     const { textoContador } = require("./utils");
+     expect(textoContador(3)).toBe("Meus favoritos (3)");
+   });
