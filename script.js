@@ -20,7 +20,7 @@ async function favoritarPokemon(nome, pokemonId) {
 async function carregarFavoritos() {
   const { data, error } = await db.from(TABELA).select("*").order("criado_em", { ascending: false });
   if (error) { console.error(error); listaFavoritos.textContent = "Erro ao carregar favoritos."; return; }
-  listaFavoritos.innerHTML = "";
+  listaFavoritos.innerHTML = "";   document.getElementById("titulo-favoritos").textContent = textoContador(data.length);
   if (data.length === 0) { listaFavoritos.textContent = "Nenhum favorito ainda."; return; }
   data.forEach((fav) => {
     const li = document.createElement("li");
