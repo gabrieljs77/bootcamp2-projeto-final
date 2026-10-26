@@ -14,6 +14,9 @@ function normalizarTermo(texto) {
 function larguraBarra(valor, maximo = 150) {
   return Math.min((valor / maximo) * 100, 100);
 }
+   function textoContador(qtd) {
+     return `Meus favoritos (${qtd})`;
+   }
 if (typeof module !== "undefined") {
-  module.exports = { formatarNumero, formatarAltura, formatarPeso, normalizarTermo, larguraBarra };
+     module.exports = { textoContador, formatarNumero, formatarAltura, formatarPeso, normalizarTermo, larguraBarra };
 }
