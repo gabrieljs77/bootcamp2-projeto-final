@@ -14,3 +14,8 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npm test
+  docker:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v4
+         - run: docker build -t teste .
